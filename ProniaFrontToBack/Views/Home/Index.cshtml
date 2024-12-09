@@ -1257,13 +1257,13 @@
                                                 @if(item.ProductImages.FirstOrDefault(x=>x.Primary) != null)
                                                 {
                                                     <img class="primary-img"
-                                                         src="~/assets/images/website-images//@item.ProductImages.FirstOrDefault(x=>x.Primary).ImgUrl"
+                                                         src="~/Upload/Product//@item.ProductImages.FirstOrDefault(x=>x.Primary).ImgUrl"
                                                          alt="Product Images" />
                                                 }
                                                 @if (item.ProductImages.FirstOrDefault(x => x.Primary==false) != null)
                                                 {
                                                     <img class="secondary-img"
-                                                         src="~/assets/images/website-images//@item.ProductImages.FirstOrDefault(x=>x.Primary==false).ImgUrl"
+                                                         src="~/Upload/Product//@item.ProductImages.FirstOrDefault(x=>x.Primary==false).ImgUrl"
                                                          alt="Product Images" />
                                                 }
                                                 

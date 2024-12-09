@@ -1,12 +1,11 @@
-﻿
-@model Product
+﻿@model Product
 @{
     int count = 0;
 }
 <!-- Begin Main Content Area  -->
 <main class="main-content">
     <div class="breadcrumb-area breadcrumb-height"
-    data-bg-image="assets/images/breadcrumb/bg/1-1-1919x388.jpg">
+         data-bg-image="assets/images/breadcrumb/bg/1-1-1919x388.jpg">
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-lg-12">
@@ -31,14 +30,14 @@
                         <div class="swiper-container single-product-slider">
                             <div class="swiper-wrapper">
 
-                                @foreach (var item in Model.ProductImages) 
+                                @foreach (var item in Model.ProductImages)
                                 {
                                     <div class="swiper-slide">
-                                        <a href="~/assets/images/website-images/@item.ImgUrl"
-                                        class="single-img gallery-popup">
+                                        <a href="~/Upload/Product/@item.ImgUrl"
+                                           class="single-img gallery-popup">
                                             <img class="img-full"
-                                            src="~/assets/images/website-images/@item.ImgUrl"
-                                            alt="Product Image" />
+                                                 src="~/Upload/Product/@item.ImgUrl"
+                                                 alt="Product Image" />
                                         </a>
                                     </div>
                                 }
@@ -49,12 +48,12 @@
                             <div class="swiper-container single-product-thumbs">
                                 <div class="swiper-wrapper">
 
-                                    @foreach (var item in Model.ProductImages) 
+                                    @foreach (var item in Model.ProductImages)
                                     {
                                         <a href="#" class="swiper-slide">
                                             <img class="img-full"
-                                            src="~/assets/images/website-images/@item.ImgUrl"
-                                            alt="Product Thumnail" />
+                                                 src="~/Upload/Product/@item.ImgUrl"
+                                                 alt="Product Thumnail" />
                                         </a>
                                     }
 
@@ -99,13 +98,13 @@
                             <li class="quantity">
                                 <div class="cart-plus-minus">
                                     <input class="cart-plus-minus-box"
-                                    value="1"
-                                    type="text" />
+                                           value="1"
+                                           type="text" />
                                 </div>
                             </li>
                             <li class="add-to-cart">
                                 <a class="btn btn-custom-size lg-size btn-pronia-primary"
-                                href="cart.html">Add to cart</a>
+                                   href="cart.html">Add to cart</a>
                             </li>
                             <li class="wishlist-btn-wrap">
                                 <a class="custom-circle-btn" href="wishlist.html">
@@ -122,7 +121,7 @@
                             <li class="service-item">
                                 <div class="service-img">
                                     <img src="~/assets/images/website-images/car.png"
-                                    alt="Shipping Icon" />
+                                         alt="Shipping Icon" />
                                 </div>
                                 <div class="service-content">
                                     <span class="title">
@@ -134,7 +133,7 @@
                             <li class="service-item">
                                 <div class="service-img">
                                     <img src="~/assets/images/website-images/card.png"
-                                    alt="Shipping Icon" />
+                                         alt="Shipping Icon" />
                                 </div>
                                 <div class="service-content">
                                     <span class="title">
@@ -146,7 +145,7 @@
                             <li class="service-item">
                                 <div class="service-img">
                                     <img src="~/assets/images/website-images/service.png"
-                                    alt="Shipping Icon" />
+                                         alt="Shipping Icon" />
                                 </div>
                                 <div class="service-content">
                                     <span class="title">
@@ -175,11 +174,11 @@
                         <div class="product-category product-tags">
                             <span class="title">Tags :</span>
                             <ul>
-                                @foreach(var item in Model.TagProducts)
+                                @foreach (var item in Model.TagProducts)
                                 {
                                     count++;
                                     <li>
-                                        <a href="#">@item.Tag.Name @(Model.TagProducts.Count==count?"":", ")</a>
+                                        <a href="#">@item.Tag.Name @(Model.TagProducts.Count == count ? "" : ", ")</a>
                                     </li>
                                 }
                             </ul>
@@ -463,7 +462,7 @@
                 <div class="col-lg-12">
                     <div class="swiper-container product-slider">
                         <div class="swiper-wrapper">
-                            @foreach(Product item in ViewBag.ReProduct)
+                            @foreach (Product item in ViewBag.ReProduct)
                             {
                                 <div class="swiper-slide product-item">
                                     <div class="product-img">
@@ -471,13 +470,13 @@
                                             @if (item.ProductImages.FirstOrDefault(x => x.Primary) != null)
                                             {
                                                 <img class="primary-img"
-                                                     src="~/assets/images/website-images//@item.ProductImages.FirstOrDefault(x=>x.Primary).ImgUrl"
+                                                     src="~/Upload/Product//@item.ProductImages.FirstOrDefault(x=>x.Primary).ImgUrl"
                                                      alt="Product Images" />
                                             }
                                             @if (item.ProductImages.FirstOrDefault(x => x.Primary == false) != null)
                                             {
                                                 <img class="secondary-img"
-                                                     src="~/assets/images/website-images//@item.ProductImages.FirstOrDefault(x=>x.Primary==false).ImgUrl"
+                                                     src="~/Upload/Product//@item.ProductImages.FirstOrDefault(x=>x.Primary==false).ImgUrl"
                                                      alt="Product Images" />
                                             }
 

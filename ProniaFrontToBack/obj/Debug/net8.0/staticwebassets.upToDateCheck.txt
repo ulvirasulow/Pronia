@@ -2063,3 +2063,15 @@ wwwroot\manage\vendor\jquery\jquery.slim.min.map
 wwwroot\manage\vendor\jquery-easing\jquery.easing.compatibility.js
 wwwroot\manage\vendor\jquery-easing\jquery.easing.js
 wwwroot\manage\vendor\jquery-easing\jquery.easing.min.js
+wwwroot\Upload\Product\09f210da-5e68-416a-83fd-506a564e4eb7ref-out.png
+wwwroot\Upload\Product\0f887a35-58aa-4fc5-9a71-e23783f819berecord-tuple.png
+wwwroot\Upload\Product\11436299-bedb-4c2b-9376-f4b6a3949b43accessmodifiers.png
+wwwroot\Upload\Product\4ac0df93-2b85-41e6-a5b7-583dc22b6332panda.jpg
+wwwroot\Upload\Product\4b57a7e0-4c4b-4da6-9645-fdb4359f74dcref-out.png
+wwwroot\Upload\Product\73c76e58-acb8-4e03-8024-61e9967fe9baapnda.jpg
+wwwroot\Upload\Product\7c54092f-1c66-41b1-934e-8fefa3693c2emundericat.png
+wwwroot\Upload\Product\8bb18bee-7faf-4682-a1fc-d6c41d8acbe8apnda.jpg
+wwwroot\Upload\Product\a8631905-310d-41fa-a2bf-4eaa1229ab5dfastbook.png
+wwwroot\Upload\Product\baf5eeb4-9451-4e1c-8d1d-6c39837ebb2emundericat.png
+wwwroot\Upload\Product\c078e902-89a1-43cf-bedc-eae062a3d175pnda.jpg
+wwwroot\Upload\Product\ef231607-0886-4a68-9fcb-9785eb02ad02panda.jpg

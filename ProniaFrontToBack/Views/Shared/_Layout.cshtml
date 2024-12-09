@@ -125,12 +125,24 @@
                                             </button>
                                             <ul class="dropdown-menu"
                                                 aria-labelledby="settingButton">
-                                                <li>
-                                                    <a class="dropdown-item" href="my-account.html">My account</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="login-register.html">Login | Register</a>
-                                                </li>
+                                                @if (User.Identity.IsAuthenticated)
+                                                {
+                                                    <li>
+                                                        <a class="dropdown-item" asp-action="MyAccount" asp-controller="Account">@User.Identity.Name</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" asp-action="LogOut" asp-controller="Account">Log Out</a>
+                                                    </li>                                                    
+                                                }
+                                                else
+                                                {
+                                                    <li>
+                                                        <a class="dropdown-item" asp-action="Register" asp-controller="Account">Register</a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="dropdown-item" asp-action="Login" asp-controller="Account">Login</a>
+                                                    </li>
+                                                }
                                             </ul>
                                         </li>
                                         <li class="d-none d-lg-block">
@@ -231,7 +243,10 @@
                                                             <a href="my-account.html">My Account</a>
                                                         </li>
                                                         <li>
-                                                            <a href="login-register.html">Login | Register</a>
+                                                            <a asp-action="Register" asp-controller="Account">Register</a>
+                                                        </li>
+                                                        <li>
+                                                            <a asp-action="Login" asp-controller="Account">Login</a>
                                                         </li>
                                                         <li>
                                                             <a href="cart.html">Shopping Cart</a>
@@ -364,7 +379,10 @@
                                                                 <a href="my-account.html">My Account</a>
                                                             </li>
                                                             <li>
-                                                                <a href="login-register.html">Login | Register</a>
+                                                                <a asp-action="Register" asp-controller="Account">Register</a>
+                                                            </li>
+                                                            <li>
+                                                                <a asp-action="Login" asp-controller="Account">Login</a>
                                                             </li>
                                                             <li>
                                                                 <a href="cart.html">Shopping Cart</a>

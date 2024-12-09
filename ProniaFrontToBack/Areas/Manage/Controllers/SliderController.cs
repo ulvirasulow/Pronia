@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProniaFrontToBack.DAL;
 using ProniaFrontToBack.Helpers.Extensions;
@@ -7,6 +8,7 @@ using ProniaFrontToBack.Models;
 namespace ProniaFrontToBack.Areas.Manage.Controllers
 {
     [Area("Manage")]
+    [Authorize(Roles = "Admin")]
     public class SliderController : Controller
     {
         AppDbContext _context;

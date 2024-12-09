@@ -1,9 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using ProniaFrontToBack.Models;
 
 namespace ProniaFrontToBack.DAL
 {
-    public class AppDbContext : DbContext
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
         public AppDbContext(DbContextOptions options) : base(options)
         {
@@ -14,6 +16,7 @@ namespace ProniaFrontToBack.DAL
         public DbSet<Product> Products { get; set; }
         public DbSet<Tags> Tags { get; set; }
         public DbSet<TagProduct> TagProducts { get; set; }
+        public DbSet<ProductImage> ProductImages    { get; set; }
  
     }
 }
